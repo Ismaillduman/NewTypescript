@@ -2,10 +2,15 @@ class Department {
     // private name:string;
     // private id:string;
     private employees: string[]=[];
-    constructor(public name: string, private id:string) {
+
+  
+
+    constructor(public name: string, private readonly id:string) {
         // this.name=n;
         // this.id = id;
     }
+
+ 
 
     desscribe(this:Department){
         console.log(`Department (${this.id}): ${this.name}`);
@@ -50,11 +55,13 @@ class AccountingDepartment extends Department{
 
 
 
+
 const it= new Department('d1','department');
 console.log(it);
 it.addEmployee('Snow');
 it.addEmployee('Targaryen');
 it.printEmployeeInformation();
+
 
 
 const accounting= new AccountingDepartment('d2',[]);
