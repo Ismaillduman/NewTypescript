@@ -15,10 +15,14 @@ class Department {
         console.log(this.employees.length);
         console.log(this.employees);
     }
+    describe() {
+        console.log('DEPARTMENT: ' + this.name);
+    }
 }
 const accouinting = new Department('d1', 'accounting');
 console.log(accouinting);
+
 accouinting.addEmployee('Snow');
 accouinting.addEmployee('Targaryen');
 accouinting.printEmployeeInformation();
-//# sourceMappingURL=app.js.map
+accouinting.describe();

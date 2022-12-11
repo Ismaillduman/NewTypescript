@@ -7,10 +7,19 @@ class Department {
         // this.id = id;
     }
 
+    describe(){
+console.log('DEPARTMENT: '+ this.name);
+
+
+    }
+}
+
+
     desscribe(this:Department){
         console.log(`Department (${this.id}): ${this.name}`);
         
     }
+
 
     addEmployee(employee: string){
 this.employees.push(employee);
@@ -21,6 +30,11 @@ this.employees.push(employee);
         console.log(this.employees);        
     }
 }
+=======
+const accouinting= new Department('Accounting');
+console.log(accouinting);
+accouinting.describe();
+
 
 
 const accouinting= new Department('d1','accounting');
