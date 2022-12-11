@@ -2,24 +2,15 @@ class Department {
     // private name:string;
     // private id:string;
     private employees: string[]=[];
-    constructor(public name: string, private readonly id:string) {
+    constructor(public name: string, private id:string) {
         // this.name=n;
         // this.id = id;
     }
-
-    describe(){
-console.log('DEPARTMENT: '+ this.name);
-
-
-    }
-}
-
 
     desscribe(this:Department){
         console.log(`Department (${this.id}): ${this.name}`);
         
     }
-
 
     addEmployee(employee: string){
 this.employees.push(employee);
@@ -30,14 +21,9 @@ this.employees.push(employee);
         console.log(this.employees);        
     }
 }
-=======
-const accouinting= new Department('Accounting');
-console.log(accouinting);
-accouinting.describe();
 
 
-
-const accouinting= new Department('d1','accounting');
+const accouinting= new Department('d1','department');
 console.log(accouinting);
 accouinting.addEmployee('Snow');
 accouinting.addEmployee('Targaryen');
