@@ -2,24 +2,20 @@ class Department {
     // private name:string;
     // private id:string;
     private employees: string[]=[];
+
+  
+
     constructor(public name: string, private readonly id:string) {
         // this.name=n;
         // this.id = id;
     }
 
-    describe(){
-console.log('DEPARTMENT: '+ this.name);
-
-
-    }
-}
-
+ 
 
     desscribe(this:Department){
         console.log(`Department (${this.id}): ${this.name}`);
         
     }
-
 
     addEmployee(employee: string){
 this.employees.push(employee);
@@ -30,18 +26,46 @@ this.employees.push(employee);
         console.log(this.employees);        
     }
 }
-=======
-const accouinting= new Department('Accounting');
-console.log(accouinting);
-accouinting.describe();
 
 
 
-const accouinting= new Department('d1','accounting');
-console.log(accouinting);
-accouinting.addEmployee('Snow');
-accouinting.addEmployee('Targaryen');
-accouinting.printEmployeeInformation();
 
-//accouinting.employees[2]='Anna';
+class ITDepartment extends Department{
+admins: string[];
+constructor(id:string,admins: string[]){
+super(id,'IT');
+this.admins= admins;
+}
+}
+
+class AccountingDepartment extends Department{
+
+    constructor(id:string, private reports:string[]){
+      super(id,'accouinting');
+    }
+
+    addReport(text: string){
+        this.reports.push(text);
+    }
+
+    printReports(){
+        console.log(this.reports);
+    }
+}
+
+
+
+
+const it= new Department('d1','department');
+console.log(it);
+it.addEmployee('Snow');
+it.addEmployee('Targaryen');
+it.printEmployeeInformation();
+
+
+
+const accounting= new AccountingDepartment('d2',[]);
+accounting.addReport('something wrong');
+accounting.printReports();
+//it.employees[2]='Anna';
 //public or private typescript supprt but JS NOT
