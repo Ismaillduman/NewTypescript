@@ -1,6 +1,6 @@
 
 
-class Apple extends colorOfApple1{
+class Apple extends colorOfApple{
     price:number;
 
     constructor(price:number, renkler:string[] ){
