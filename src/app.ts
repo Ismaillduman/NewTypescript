@@ -63,16 +63,16 @@ class AccountingDepartment extends Department{
 
 
 
-const it= new Department('d1','department');
-console.log(it);
-it.addEmployee('Snow');
-it.addEmployee('Targaryen');
-it.printEmployeeInformation();
+// const it= new Department('d1','department');
+// console.log(it);
+// it.addEmployee('Snow');
+// it.addEmployee('Targaryen');
+// it.printEmployeeInformation();
 
 
 
-const accounting= new AccountingDepartment('d2',[]);
-accounting.addReport('something wrong');
-accounting.printReports();
-//it.employees[2]='Anna';
-//public or private typescript supprt but JS NOT
+// const accounting= new AccountingDepartment('d2',[]);
+// accounting.addReport('something wrong');
+// accounting.printReports();
+// //it.employees[2]='Anna';
+// //public or private typescript supprt but JS NOT
