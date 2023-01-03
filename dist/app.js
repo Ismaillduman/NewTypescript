@@ -4,19 +4,6 @@ class Department {
         this.name = name;
         this.id = id;
         this.employees = [];
-
-
-    }
-    desscribe() {
-        console.log(`Department (${this.id}): ${this.name}`);
-    }
-    addEmployee(employee) {
-        this.employees.push(employee);
-    }
-    printEmployeeInformation() {
-        console.log(this.employees.length);
-        console.log(this.employees);
-
     }
     desscribe() {
         console.log(`Department (${this.id}): ${this.name}`);
@@ -40,6 +27,12 @@ class AccountingDepartment extends Department {
         super(id, 'accouinting');
         this.reports = reports;
     }
+    addEmployee(name) {
+        if (name === 'Max') {
+            return;
+        }
+        this.employees.push(name);
+    }
     addReport(text) {
         this.reports.push(text);
     }
@@ -47,7 +40,6 @@ class AccountingDepartment extends Department {
         console.log(this.reports);
     }
 }
-
 const it = new Department('d1', 'department');
 console.log(it);
 it.addEmployee('Snow');
@@ -56,13 +48,4 @@ it.printEmployeeInformation();
 const accounting = new AccountingDepartment('d2', []);
 accounting.addReport('something wrong');
 accounting.printReports();
-
-
-const accouinting = new Department('d1', 'accounting');
-console.log(accouinting);
-
-accouinting.addEmployee('Snow');
-accouinting.addEmployee('Targaryen');
-accouinting.printEmployeeInformation();
-accouinting.describe();
-
+//# sourceMappingURL=app.js.map
