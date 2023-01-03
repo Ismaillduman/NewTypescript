@@ -1,4 +1,6 @@
-
+abstract class colorOfApple{
+    constructor(public renkler:string[]){}
+}
 
 class Apple extends colorOfApple{
     price:number;
@@ -16,9 +18,7 @@ return this.price;
 
 
 
-abstract class colorOfApple{
-    constructor(public renkler:string[]){}
-}
+
 
 let newApple: Apple= new Apple(3,["rot","blau"]);
 

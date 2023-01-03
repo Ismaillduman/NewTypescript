@@ -166,3 +166,7 @@ type Airplane1={
 //   }
 //   console.log(person1);
   
+
+
+
+
