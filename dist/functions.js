@@ -1,8 +1,8 @@
 "use strict";
-function intro(name, age) {
+function intro(name, _age) {
     return `My Name Is ${name} and age is ${23}`;
 }
-const intro2 = (name, age) => {
+const intro2 = (name, _age) => {
     return `My Name Is ${name} and age is ${23}`;
 };
 var Ageunit;

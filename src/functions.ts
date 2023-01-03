@@ -1,8 +1,8 @@
-function intro(name:string,age:number):string {
+function intro(name:string,_age:number):string {
     return `My Name Is ${name} and age is ${23}`;
 }
 
-const intro2= (name:string,age:number):string=>{
+const intro2= (name:string,_age:number):string=>{
 
     return `My Name Is ${name} and age is ${23}`;
 }
