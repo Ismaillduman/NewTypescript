@@ -60,3 +60,36 @@ type Reserve1={
         destination:string
     ):Reservation;
 }
+
+//neeed for polymorpfic functions
+type Filter = {
+    (array: number[], predicate: (item: number) => boolean): number[];
+    (array: string[], predicate: (item: string) => boolean): string[];
+    (array: object[], predicate: (item: object) => boolean): object[];
+  };
+const filter= (array:any[], predicate:Function)=> {
+    let result:any[] = [];
+
+    for (let i = 0; i < array.length; i++) {
+        let item = array[i];
+        if (predicate(item)) {
+            result.push(item);
+            
+        }
+        
+    }
+    return result;
+}
+let numbers=[1,2,5,7,8,9,45];
+
+function greaterThanSeven1(item:number){
+    return item>7;
+}
+
+let animals= ['cat','dog','lion','rat'];
+function filtersCats1(item:string){
+    return item==='cat';
+}
+console.log(filter(numbers, greaterThanSeven1));
+console.log(filter(animals,filtersCats1));
+
