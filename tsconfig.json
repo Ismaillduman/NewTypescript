@@ -5,7 +5,7 @@
     "module": "commonjs" /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', or 'ESNext'. */,
     "lib": [
       "dom",
-      "ES6", "DOM",
+      "ES2020", "DOM",
       "dom.iterable",
       "scripthost"
     ] /* Specify library files to be included in the compilation. */,
