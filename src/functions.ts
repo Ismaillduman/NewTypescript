@@ -39,3 +39,24 @@ function converAgeToMonths(personX:Person):Person{
     return personX;
 };
 console.log(personX.greet("guten Morgen wie geht's dir"));
+
+
+//Function overloading
+
+type Reservation1={
+departureDate:Date;
+returnDate:Date;
+departingFrom:string;
+destination:string;
+
+};
+
+type Reserve1={
+
+    (
+        departureDate:Date,
+        returnDate:Date,
+        departingFrom:string,
+        destination:string
+    ):Reservation;
+}

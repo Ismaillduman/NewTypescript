@@ -7,11 +7,11 @@ So this is the major difference between a union and an intersection.
 Union types can be of either type dog or can be a cat type, but in case of intersection, it is all
 
 the unique properties combined with the common properties of the two types.
-## Functions
+# Functions
 
 Functions are the fundamental building block of any application in JavaScript. They’re how you build up layers of abstraction, mimicking classes, information hiding, and modules. In TypeScript, while there are classes, namespaces, and modules, functions still play the key role in describing how to do things. TypeScript also adds some new capabilities to the standard JavaScript functions to make them easier to work with.
 
-# Functions
+## Functions
 To begin, just as in JavaScript, TypeScript functions can be created both as a named function or as an anonymous function. This allows you to choose the most appropriate approach for your application, whether you’re building a list of functions in an API or a one-off function to hand off to another function.
 
 To quickly recap what these two approaches look like in JavaScript:
@@ -37,11 +37,14 @@ let z = 100;
 function addToZ(x, y) {
   return x + y + z;
 }
+```
+
 Try
 Function Types
 Typing the function
 Let’s add types to our simple examples from earlier:
 
+```java
 function add(x: number, y: number): number {
   return x + y;
 }
@@ -63,9 +66,11 @@ let myAdd: (x: number, y: number) => number = function (
 ): number {
   return x + y;
 };
+```
 Try
 A function’s type has the same two parts: the type of the arguments and the return type. When writing out the whole function type, both parts are required. We write out the parameter types just like a parameter list, giving each parameter a name and a type. This name is just to help with readability. We could have instead written:
 
+```java
 let myAdd: (baseValue: number, increment: number) => number = function (
   x: number,
   y: number
