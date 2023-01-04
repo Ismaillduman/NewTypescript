@@ -1,12 +1,12 @@
 "use strict";
-class Department {
+class Department1 {
     constructor(name, id) {
         this.name = name;
         this.id = id;
         this.employees = [];
     }
     desscribe() {
-        console.log(`Department (${this.id}): ${this.name}`);
+        console.log(`Department1 (${this.id}): ${this.name}`);
     }
     addEmployee(employee) {
         this.employees.push(employee);
@@ -16,13 +16,13 @@ class Department {
         console.log(this.employees);
     }
 }
-class ITDepartment extends Department {
+class ITDepartment extends Department1 {
     constructor(id, admins) {
         super(id, 'IT');
         this.admins = admins;
     }
 }
-class AccountingDepartment extends Department {
+class AccountingDepartment extends Department1 {
     constructor(id, reports) {
         super(id, 'accouinting');
         this.reports = reports;
