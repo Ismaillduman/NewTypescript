@@ -18,19 +18,19 @@ abstract class Department {
     }
   }
 
-  public printHolidays(){
-    if (this.holidays.length===0){
-return console.log("There are no holidays ((: ");
-    }
-    console.log("Here is the list of holidays");
+   public abstract printHolidays():void;
+//     if (this.holidays.length===0){
+// return console.log("There are no holidays ((: ");
+//     }
+//     console.log("Here is the list of holidays");
 
-    this.holidays.forEach((holiday, index )=>{
+//     this.holidays.forEach((holiday, index )=>{
     
-    console.log(
-        `${index + 1}.${holiday.reason}, ${holiday.date}`
-    )});
+//     console.log(
+//         `${index + 1}.${holiday.reason}, ${holiday.date}`
+//     )});
     
-  }
+//   }
 }
 
 class ItDepartment extends Department {
@@ -39,11 +39,36 @@ class ItDepartment extends Department {
   constructor(){
     super("It Department");
   }
+  public printHolidays(){
+    if (this.holidays.length===0){
+return console.log("There are no holidays ((: ");
+    }
+    console.log(`Here is the list of ${this.name} holidays`);
+    this.holidays.forEach((holiday, index )=>{
+    
+    console.log(
+        `${index + 1}.${holiday.reason}, ${holiday.date}`
+    )});
+    
+  }
 }
 class AdminDepartment extends Department {
   protected holidays: Holidays = [];
   constructor(){
     super("Admin Department");
+  }
+
+  public printHolidays(){
+    if (this.holidays.length===0){
+return console.log("There are no holidays ((: ");
+    }
+    console.log(`Here is the list of ${this.name} holidays`);
+    this.holidays.forEach((holiday, index )=>{
+    
+    console.log(
+        `${index + 1}.${holiday.reason}, ${holiday.date}`
+    )});
+    
   }
 }
 
@@ -79,5 +104,6 @@ itDepartment.printHolidays();
 adminDepartment.printHolidays();
 
 
-
+//If I define an abstract method in an abstract class,
+// I must have this method in the child class.
 
