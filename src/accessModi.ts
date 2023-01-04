@@ -1,13 +1,13 @@
 class Persony {
   //private name:string;
-  protected name: string;
-  email: string;
-  password: string;
+//   protected name: string;
+//   email: string;
+//   password: string;
 
-  constructor(name: string, email: string, password: string) {
-    this.name = name;
-    this.email = email;
-    this.password = password;
+  constructor(protected name: string, public email: string, public password: string) {
+    // this.name = name;
+    // this.email = email;
+    // this.password = password;
   }
   public getName() {
     return this.name;
@@ -31,3 +31,5 @@ console.log(adminx.getAdminName());
 //public getAdminName() {
 //     return this.name;
 //   }
+
+
