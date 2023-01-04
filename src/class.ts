@@ -35,10 +35,23 @@ class User{
 
 class AdminUser extends User{
 isAdmin:boolean=true;
+userReporting:number;
+
+constructor(
+    name:string,
+    email:string,
+    age:number,
+    usersReporting:number
+    ){
+        //super keyword when i want to use my constructor on child class 
+        super(name,email,age); // attention to order
+        this.userReporting= usersReporting;
+
+}
 
 }
 const user:User=new User("jack", "jack@email", 45);
-const admin:AdminUser=new AdminUser("Cavin","cavin@email",56);
+const admin:AdminUser=new AdminUser("Cavin","cavin@email",56 , 5);
 console.log(user);
 console.log(admin);
 
