@@ -35,17 +35,17 @@ class User1{
 
 class AdminUser1 extends User1{
 isAdmin:boolean=true;
-user1User1Reporting:number;
+user1Reporting:number;
 
 constructor(
     name:string,
     email:string,
     age:number,
-    user1User1sReporting:number
+    user1Reporting:number
     ){
         //super keyword when i want to use my constructor on child class 
         super(name,email,age); // attention to order
-        this.user1User1Reporting= user1User1sReporting;
+        this.user1Reporting= user1Reporting;
 
 }
 
