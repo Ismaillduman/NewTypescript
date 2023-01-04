@@ -145,7 +145,7 @@ type Airplane1={
   //readonly tupels
   type readOnlyPerson= readonly[string,string,number];
 
-  let person:readOnlyPerson=['john','apple',54];
+   let person:readOnlyPerson=['john','apple',54];
   console.log(person);
   
 
