@@ -1,4 +1,4 @@
-class Department {
+class Department1 {
     // private name:string;
     // private id:string;
     protected employees: string[]=[];
@@ -12,8 +12,8 @@ class Department {
 
  
 
-    desscribe(this:Department){
-        console.log(`Department (${this.id}): ${this.name}`);
+    desscribe(this:Department1){
+        console.log(`Department1 (${this.id}): ${this.name}`);
         
     }
 
@@ -30,7 +30,7 @@ this.employees.push(employee);
 
 
 
-class ITDepartment extends Department{
+class ITDepartment extends Department1{
 admins: string[];
 constructor(id:string,admins: string[]){
 super(id,'IT');
@@ -38,7 +38,7 @@ this.admins= admins;
 }
 }
 
-class AccountingDepartment extends Department{
+class AccountingDepartment extends Department1{
 
     constructor(id:string, private reports:string[]){
       super(id,'accouinting');
@@ -63,7 +63,7 @@ class AccountingDepartment extends Department{
 
 
 
-// const it= new Department('d1','department');
+// const it= new Department1('d1','department');
 // console.log(it);
 // it.addEmployee('Snow');
 // it.addEmployee('Targaryen');
