@@ -19,7 +19,7 @@ console.log(personx.greet());
 
 
 //INHERITANCE
-class User{
+class User1{
     name:string;
     email:string;
     age:number;
@@ -33,25 +33,25 @@ class User{
     }
 }
 
-class AdminUser extends User{
+class AdminUser1 extends User1{
 isAdmin:boolean=true;
-userReporting:number;
+user1Reporting:number;
 
 constructor(
     name:string,
     email:string,
     age:number,
-    usersReporting:number
+    user1Reporting:number
     ){
         //super keyword when i want to use my constructor on child class 
         super(name,email,age); // attention to order
-        this.userReporting= usersReporting;
+        this.user1Reporting= user1Reporting;
 
 }
 
 }
-const user:User=new User("jack", "jack@email", 45);
-const admin:AdminUser=new AdminUser("Cavin","cavin@email",56 , 5);
-console.log(user);
+const user1:User1=new User1("jack", "jack@email", 45);
+const admin:AdminUser1=new AdminUser1("Cavin","cavin@email",56 , 5);
+console.log(user1);
 console.log(admin);
 
